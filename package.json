@@ -1,6 +1,6 @@
 {
   "name": "@nubank/react-intl-universal",
-  "version": "1.9.2-nubank",
+  "version": "1.9.3-nubank",
   "description": "Internationalize React apps. Not only for React.Component but also for Vanilla JS.",
   "keywords": [
     "intl",
@@ -21,8 +21,8 @@
     "test:watch": "jest --watch --verbose --coverage",
     "clean": "rimraf coverage/ lib/",
     "build": "rollup -c rollup.config.js",
-    "preversion": "npm run build",
-    "prepublish": "npm run build"
+    "preversion": "npm run clean && npm run build && npm run test",
+    "prepublish": "npm run clean && npm run build"
   },
   "author": "chiawei.tcw@alibaba-inc.com",
   "license": "BSD",
